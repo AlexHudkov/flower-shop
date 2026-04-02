@@ -1,0 +1,51 @@
+.wrapper {
+    margin: 20px 0 80px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.track {
+    display: flex;
+    animation: scrollText 50s linear infinite;
+}
+
+.content {
+    font-size: 3rem;
+    color: #4c4c4c;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-right: 0.2rem;
+
+}
+
+@keyframes scrollText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Планшет */
+@media (max-width: 1024px) {
+    .content {
+        font-size: 2rem;
+    }
+}
+
+/* Телефон */
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 16px 0 48px 0;
+    }
+
+    .content {
+        font-size: 1.4rem;
+    }
+
+    .track {
+        animation-duration: 10s;
+    }
+}

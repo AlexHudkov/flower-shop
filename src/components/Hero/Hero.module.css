@@ -1,0 +1,150 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("/bg_florin.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), transparent);
+    pointer-events: none;
+}
+
+.quoteBox {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 60px 40px 40px;
+    border-radius: 12px;
+    max-width: 600px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #4a1c1c;
+    line-height: 1.5;
+}
+
+.quoteBox::before {
+    content: "‘‘";
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 9rem;
+    color: #46b4b4;
+    font-weight: 700;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+.clickArea {
+    position: absolute;
+    top: -20px;
+    left: 52%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.quote {
+    margin: 0;
+    font-size: clamp(16px, 2vw, 28px);
+    line-height: 1.4;
+}
+
+/* Мобільні portrait */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    .hero {
+        background-size: auto 100%;
+        background-position: 25% center;
+    }
+
+    .quoteBox {
+        padding: 40px 20px 30px;
+        max-width: 85%;
+        font-size: 1rem;
+    }
+
+    .quoteBox::before {
+        font-size: 6rem;
+        top: -50px;
+    }
+
+    .quote {
+        font-size: 24px;
+    }
+
+    .clickArea {
+        width: 60px;
+        height: 40px;
+        top: -15px;
+    }
+}
+
+/* Мобільні landscape */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        background-size: 100% auto;
+        background-position: center;
+    }
+
+    .quoteBox {
+        padding: 30px 20px;
+        max-width: 70%;
+        font-size: 0.9rem;
+    }
+
+    .quoteBox::before {
+        font-size: 5rem;
+        top: -40px;
+    }
+}
+
+/* Дуже маленькі */
+@media (max-width: 480px) {
+    .quoteBox {
+        padding: 25px 15px 20px;
+        font-size: 0.8rem;
+    }
+
+    .quoteBox::before {
+        font-size: 4rem;
+        top: -35px;
+    }
+
+    .quote {
+        font-size: 20px;
+    }
+
+    .clickArea {
+        width: 50px;
+        height: 30px;
+    }
+}
+
+/* Планшети */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .quoteBox {
+        max-width: 75%;
+        font-size: 1.4rem;
+    }
+
+    .quoteBox::before {
+        font-size: 7rem;
+        top: -60px;
+    }
+}

@@ -1,0 +1,76 @@
+.wrapper {
+    padding-bottom: 30px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallaxTrack {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.content {
+    display: flex;
+}
+
+.parallaxTrack img,
+.content img {
+    height: 300px;
+    margin: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+.scrollTrack {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scrollTrack::-webkit-scrollbar {
+    display: none;
+}
+
+
+.copyGroup {
+    display: flex;
+    flex-shrink: 0;
+    gap: 16px;
+    padding: 0 8px;
+}
+
+.scrollTrack img {
+    flex-shrink: 0;
+    height: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+/* Планшет */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .scrollTrack img {
+        height: 200px;
+    }
+}
+
+/* Телефон */
+@media (max-width: 767px) {
+    .wrapper {
+        padding-bottom: 16px;
+    }
+
+    .scrollTrack img {
+        height: 160px;
+        border-radius: 6px;
+    }
+
+    .copyGroup {
+        gap: 12px;
+    }
+}

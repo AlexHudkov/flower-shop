@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "bouquets"
+    label: "Букеты"
+    folder: "src/content/bouquets"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Название", widget: "string" }
+      - { name: "image", label: "Фото", widget: "image" }
+      - { name: "order", label: "Порядок", widget: "number" }

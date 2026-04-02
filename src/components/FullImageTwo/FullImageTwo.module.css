@@ -1,0 +1,34 @@
+.fullImage {
+    position: relative;
+    height: 100vh;
+    background: url("/fullimage2_2.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Планшет */
+@media (max-width: 1024px) {
+    .fullImage {
+        height: 100svh;
+        background-position: right center;
+        background-attachment: scroll;
+    }
+}
+
+/* Телефон portrait */
+@media (max-width: 767px) and (orientation: portrait) {
+    .fullImage {
+        height: 100svh;
+        background-position: 60% center;
+        background-attachment: scroll;
+    }
+}
+
+/* Телефон landscape */
+@media (max-width: 767px) and (orientation: landscape) {
+    .fullImage {
+        height: 100svh;
+        background-position: right center;
+        background-attachment: scroll;
+    }
+}

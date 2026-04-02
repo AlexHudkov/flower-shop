@@ -1,0 +1,37 @@
+{
+  "name": "flower-shop",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-input-mask": "^3.0.6",
+    "@types/react-router-hash-link": "^2.4.9",
+    "@types/react-scroll": "^1.8.10",
+    "@types/rellax": "^1.7.7",
+    "gh-pages": "^6.3.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "gsap": "^3.14.2",
+    "imask": "^7.6.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-input-mask": "^2.0.4",
+    "react-international-phone": "^4.8.0",
+    "react-phone-input-2": "^2.15.1",
+    "react-router-dom": "^7.13.1",
+    "react-router-hash-link": "^2.4.3",
+    "react-scroll": "^1.9.3",
+    "rellax": "^1.12.1",
+    "simple-parallax-js": "^6.3.3"
+  }
+}
